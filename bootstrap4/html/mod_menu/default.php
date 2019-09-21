@@ -70,17 +70,18 @@ foreach ($list as $i => &$item)
 	}
 	
 	echo '<li' . $class . '>';
-    $item->anchor_css = 'nav-link' . $item->anchor_css;
+	$item->anchor_css = 'nav-link' . $item->anchor_css;
 	if($item->level > $params->get('startLevel')) {
 		$item->anchor_css = 'dropdown-item';
 	}
 	
 	// The next item is deeper.
 	if ($item->deeper)
-	{
+	 {
 		$item->anchor_css .= ' dropdown-toggle';
-		$item->data = 'data-toggle="dropdown"';
-	}
+		$item->data_toggle = 'dropdown';
+		//$item->data = 'data-bs-toggle="dropdown"';
+	 }
 
 	// Render the menu item.
 	switch ($item->type) :

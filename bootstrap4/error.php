@@ -27,6 +27,12 @@ $sitename = $app->get('sitename');
 
 // Add JavaScript Frameworks
 JHtml::_('jquery.framework');
+
+// Logo file or site title param
+if ($this->params->get('logoFile'))
+{
+	$logo = '<img src="' . JUri::root() . $this->params->get('logoFile') . '" alt="' . $sitename . '" />';
+}
 ?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="<?php echo $this->language; ?>" lang="<?php echo $this->language; ?>" dir="<?php echo $this->direction; ?>">
@@ -56,8 +62,9 @@ JHtml::_('jquery.framework');
     ?>">
 
         <header class="navbar navbar-static-top navbar-light bg-faded" role="banner">
-            <a class="navbar-brand" href="<?php echo $this->baseurl; ?>/"><?php echo $sitename; ?></a>
+            <a class="navbar-brand" href="<?php echo $this->baseurl; ?>/"></a>
         </header>
+		<?php echo $logo; ?>
         <div class="body">
             <div class="content">
                 <div class="jumbotron jumbotron-fluid bg-primary">

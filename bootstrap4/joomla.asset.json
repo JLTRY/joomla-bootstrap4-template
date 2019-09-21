@@ -1,0 +1,90 @@
+{
+  "$schema": "https://developer.joomla.org/schemas/json-schema/web_assets.json",
+  "name": "cassiopeia",
+  "version": "4.0.0",
+  "description": "bootstrap5 is the Joomla 4 site template",
+  "license": "GPL-2.0+",
+  "assets": [
+   {
+      "name": "bootstrap.bundle",
+      "type": "script",
+      "uri": "media/vendor/bootstrap/js/bootstrap.bundle.js",
+	  "dependencies": [
+        "core",
+		"jquery"
+	  ]
+    },
+    {
+      "name": "template.bootstrap5",
+      "type": "script",
+      "dependencies": [
+        "core",
+		"bootstrap.bundle",
+		"bootstrap.dropdown",
+		"awesomplete"
+      ],
+      "uri": "user.js"
+    },
+    {
+      "name": "template.bootstrap5.fontawesome",
+      "type": "style",
+      "uri": "system/joomla-fontawesome.min.css"
+    },
+    {
+      "name": "template.bootstrap5.googlefont",
+      "type": "style",
+      "uri": "https://fonts.googleapis.com/css?family=Fira+Sans:400"
+    },
+    {
+      "name": "template.bootstrap5.typography",
+      "type": "style",
+      "uri": "plugins/editors/jckeditor/typography/typography.css"
+    },
+    {
+      "name": "template.bootstrap5.bootstrap",
+      "type": "style",
+      "uri": "media/vendor/bootstrap/css/bootstrap.min.css"
+    },
+    {
+      "name": "template.bootstrap5.template",
+      "type": "style",
+      "uri": "template.css"
+    },
+    {
+      "name": "template.bootstrap5.templatemod",
+      "type": "style",
+      "uri": "templatemod.css"
+    },
+	{
+      "name": "template.bootstrap5.user",
+      "type": "style",
+      "uri": "user.css"
+    },
+    {
+      "name": "template.bootstrap5.ltr",
+      "type": "style",
+      "dependencies": [ "template.bootstrap5.typography", "template.bootstrap5.fontawesome", "template.bootstrap5.templatemod", "template.bootstrap5.user", "template.bootstrap5.bootstrap", "template.bootstrap5.template"]
+    },
+    {
+      "name": "template.bootstrap5.rtl",
+      "type": "style",
+      "dependencies": [ "template.bootstrap5.typography", "template.bootstrap5.fontawesome", "template.bootstrap5.templatemod", "template.bootstrap5.user", "template.bootstrap5.bootstrap", "template.bootstrap5.template"]
+    },
+    {
+      "name": "template.bootstrap5.ltr",
+      "type": "preset",
+      "dependencies": [
+        "template.bootstrap5.ltr#style",
+        "template.bootstrap5#script"
+      ]
+    },
+    {
+      "name": "template.bootstrap5.rtl",
+      "type": "preset",
+      "dependencies": [
+        "template.bootstrap5.rtl#style",
+        "template.bootstrap5#script"
+      ]
+    }
+  ]
+}
