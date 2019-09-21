@@ -8,7 +8,7 @@
  */
 
 defined('_JEXEC') or die;
-
+use Joomla\Component\Tags\Site\Helper\TagsHelperRoute;  
 JHtml::addIncludePath(JPATH_COMPONENT . '/helpers');
 
 JHtml::_('behavior.core');

@@ -17,21 +17,21 @@ $show_description = $this->params->get('show_description', 1);
 if ($show_description)
 {
 	// Calculate number of characters to display around the result
-	$term_length = JString::strlen($this->query->input);
+	$term_length = strlen($this->query->input);
 	$desc_length = $this->params->get('description_length', 255);
 	$pad_length = $term_length < $desc_length ? floor(($desc_length - $term_length) / 2) : 0;
 
 	// Find the position of the search term
-	$pos = JString::strpos(JString::strtolower($this->result->description), JString::strtolower($this->query->input));
+	$pos = strpos(strtolower($this->result->description), strtolower($this->query->input));
 
 	// Find a potential start point
 	$start = ($pos && $pos > $pad_length) ? $pos - $pad_length : 0;
 
 	// Find a space between $start and $pos, start right after it.
-	$space = JString::strpos($this->result->description, ' ', $start > 0 ? $start - 1 : 0);
+	$space = strpos($this->result->description, ' ', $start > 0 ? $start - 1 : 0);
 	$start = ($space && $space < $pos) ? $space + 1 : $start;
 
-	$description = JHtml::_('string.truncate', JString::substr($this->result->description, $start), $desc_length, true);
+	$description = JHtml::_('string.truncate', substr($this->result->description, $start), $desc_length, true);
 }
 
 $route = $this->result->route;

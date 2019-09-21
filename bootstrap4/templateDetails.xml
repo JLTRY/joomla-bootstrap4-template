@@ -54,8 +54,6 @@
         <language tag="es-ES">es-ES/es-ES.tpl_bootstrap4.sys.ini</language>
         <language tag="nl-NL">nl-NL/nl-NL.tpl_bootstrap4.ini</language>
         <language tag="nl-NL">nl-NL/nl-NL.tpl_bootstrap4.sys.ini</language>
-        <language tag="pt-BR">pt-BR/pt-BR.tpl_bootstrap4.ini</language>
-        <language tag="pt-BR">pt-BR/pt-BR.tpl_bootstrap4.sys.ini</language>
         <language tag="ru-RU">ru-RU/ru-RU.tpl_bootstrap4.ini</language>
         <language tag="ru-RU">ru-RU/ru-RU.tpl_bootstrap4.sys.ini</language>
         <language tag="sk-SK">sk-SK/sk-SK.tpl_bootstrap4.ini</language>
@@ -68,19 +66,25 @@
 					label="JGLOBAL_DESCRIPTION"
 					description="JGLOBAL_SUBHEADING_DESC"
 					filter="string" />
-                <field name="favicon" class="" type="media" default=""
+                <field name="favicon" class="" type="text" default="/templates/bootstrap4/favicon.ico"
 					label="TPL_BOOTSTRAP4_FAVICON"
 					description="TPL_BOOTSTRAP4_FAVICON_DESC" />
-                <field name="customcss" class="" type="text" default=""
-					label="TPL_BOOTSTRAP4_CUSTOMCSS"
-					description="TPL_BOOTSTRAP4_CUSTOMCSS_DESC" />
-		<field name="fluidContainer"
+				
+				<field 
+					name="logoFile" 
+					type="media" 
+					label="TPL_PROTOSTAR_LOGO_LABEL"
+					description="TPL_PROTOSTAR_LOGO_DESC" 
+					class="" 
+					default=""
+				/>
+				<field name="fluidContainer"
 					type="radio"
 					label="TPL_BOOTSTRAP4_FLUID_LABEL"
 					description="TPL_BOOTSTRAP4_FLUID_DESC"
 					class="btn-group btn-group-yesno"
 					default="0"
-					>
+				>
 					<option value="1">TPL_BOOTSTRAP4_FLUID</option>
 					<option value="0">TPL_BOOTSTRAP4_STATIC</option>
 				</field>

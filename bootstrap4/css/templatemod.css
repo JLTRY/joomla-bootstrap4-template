@@ -4,6 +4,10 @@ body.site
 	background-color: #f4f6f7 
 }
 
+body {
+	font-size: 13px !important;
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
 
 a
 {
@@ -178,12 +182,8 @@ body.site {
 .well {
     padding: 15px;
 }
-	
-h4,
-h5,
-h6 {
-	margin: 8px 0 6px 0!important;
-}
+
+
 
 .page-header  h2{
 	margin: 12px 0 6px 0!important;
@@ -201,12 +201,18 @@ h2 {
 }
 
 h1, h2 ,h3{
-	border-bottom: 1px solid #ddd!important;
+	border-bottom: none!important;
 }
 
 
 h4, h5, h6 {
 	border-bottom: none !important;
+	margin: 8px 0 6px 0!important;
+}
+
+
+h4 {
+	font-size :14px! important;
 }
 
 
@@ -279,14 +285,8 @@ table.category th
 select {
 	height: 24px;
 	line-height : 24px;
-}	
-.input-append .add-on, .input-prepend .add-on, .uneditable-input ,
-input[type="text"], input[type="password"], input[type="datetime"], input[type="datetime-local"], input[type="date"],
-input[type="month"], input[type="time"], input[type="week"], input[type="number"], input[type="email"], input[type="url"],
-input[type="search"], input[type="tel"], input[type="color"]
-{
-    height: 22px;
 }
+
 
 div.mw-geshi {
     border: 1px dashed #2F6FAB;
@@ -360,22 +360,23 @@ label
 
 @media (max-width: 592px){
 	.header {
-		margin-bottom: 0px;		
+		margin-bottom: 0px;
+		left:0px;
 	}
 	header .nav.pull-right, .header-search {
 		float: right;
 		display: block;
 	}
 	
-	.nav {		
-		margin-bottom: 2px;		
+	.nav {
+		margin-bottom: 2px;
 		margin-top: 2px;
 	}
 	.nav-collapse {
 		margin-top: 0px;
 		border-width:1px;
-	}	
-	
+	}
+
 	.nav-collapse.in
 	{
 		border:solid 1px #ddd;
@@ -389,7 +390,7 @@ label
 		top : -18px;
 		margin-top: 0px;
 		padding-left: 0px;
-		padding-bottom: 0px;		
+		padding-bottom: 0px;
 	}
 	.nav-collapse.in.collapse {
 		z-index: 9999;
@@ -397,29 +398,29 @@ label
 	.navigation .nav-child {
 		left: 60px;
 	}
-	
+
 	.brand {
-		
+
 		align: center;
 	}
 	.body .container {
 		padding: 2px;
 	}
-		
+
 	.container {
 		width:96% !important;
 		max-width:96% !important;
-		margin-left: 2px !important;		
+		margin-left: 2px !important;
         margin-right: 2px !important;
-		margin-top: 0px !important;		
+		margin-top: 0px !important;
         margin-bottom: 0px !important;
 		padding-left: 2px !important;
 		padding-right: 2px !important;
 	}
-	body.site{	
-		padding: 4px !important;	
+	body.site{
+		padding: 4px !important;
 	}
-	
+
 	.item-page
 	{
 		border:none;
@@ -428,10 +429,14 @@ label
 		padding-bottom: 0px;
 	}
 
-	
-}	
+
+}
 
 @media (min-width: 768px) and (max-width: 769px){
+	.header {
+		margin-bottom: 0px;
+		left:10px;
+	}
 	.navbar {
 		position: absolute;
 		float: none;
@@ -447,6 +452,10 @@ label
 }
 
 @media (min-width: 768px) and (max-width: 979px) {
+	.header {
+		margin-bottom: 0px;
+		left:20px;
+	}
 	.offset1_2,.offset1-2 {
 		margin-left: 32px !important;
 	}
@@ -457,6 +466,13 @@ label
 }
 
 @media (min-width: 980px) and (max-width: 1199px) {
+	header {
+		margin-bottom: 0px;
+		left:50px;
+	}
+	#navbarSupportedContent {
+		left:50px;
+	}
 	.offset1_2,.offset1-2 {
 		margin-left: 40px !important;
 	}
@@ -467,6 +483,16 @@ label
 }
 
 @media (min-width: 1200px) {
+	header {
+		margin-bottom: 0px;
+		left:100px!important;
+	}
+	.navbar {
+		position: absolute;
+		float: none;
+		top: 0;
+		left: 110px;
+	}
 	.offset1_2,.offset1-2 {
 		margin-left: 50px !important;
 	}
@@ -474,8 +500,12 @@ label
 		margin-left: 5.32% !important;
 		*margin-left: 5.25% !important;
 	}
-	
-}	
+	.a-propos 
+	{
+		position: absolute; 
+		right: 15%;
+	}
+}
 
 
 @media (min-width: 768px) and (max-width: 979px) {
@@ -501,7 +531,7 @@ label
 @media (min-width: 1200px) {
 	.offset1_4,.offset1-4 {
 		margin-left: 25px !important;
-	}	
+	}
 	.row-fluid .offset1_4,.offset1-4 {
 		margin-left: 2.16% !important;
 		*margin-left: 2.12% !important;
@@ -512,7 +542,7 @@ label
 	.brand {
 		min-height: 100px;
 	}
-}	
+}
 
 
 
@@ -533,7 +563,7 @@ label
  .readmore-link,a.readmore-link {
     background-image:  url("http://images.jltryoen.fr/LOGO-Cercle-Fleche2.png")!important;
     background-repeat: no-repeat;
-	padding-bottom: 20px !important;	
+	padding-bottom: 20px !important;
     padding-left: 50px !important;
     padding-right: 8px !important;
     padding-top: 12px !important;
@@ -589,7 +619,7 @@ label
 }
 
 [class*="-jck"]:hover, a.[class*="-jck"]:hover  {
-  background-color: #F2F2F2 !important;
+    background-color: #F2F2F2 !important;
     background-repeat: no-repeat !important;
     transition-delay: 0s;
     transition-duration: 400ms;
@@ -600,19 +630,20 @@ label
 [class*="-jck"]
 {
 	max-width:94% !important;
-	
+
 }
 
 .mostread a
 {
 	background: transparent url(http://www.jltryoen.fr/joomla_3.0/templates/protostar/favicon.ico) center left no-repeat;
     padding-left: 18px;
-	background-size:16px;	
-}	
+	background-size:16px;
+}
 
 .mostread li
 {
-	list-style-type: none;
+    list-style-type: none;
+    margin-left: -25px;
 }
 
 
@@ -625,10 +656,10 @@ ul.mostread {
 	visibility: hidden;
 	height: 0px;
 	line-height :0px;
-}	
+}
 .photofeedTitle, .photofeedGallery {
 	visibility: hidden;
-}	
+}
 
 
 .nodisplay {
@@ -660,10 +691,45 @@ body .container {
 .readmore-link,a.readmore-link {
     background-image:  url("http://images.jltryoen.fr/LOGO-Cercle-Fleche2.png")!important;
     background-repeat: no-repeat;
-	padding-bottom: 20px !important;	
+	padding-bottom: 20px !important;
     padding-left: 50px !important;
     padding-right: 8px !important;
     padding-top: 12px !important;
 	margin-bottom : 20px !important;
 }
 
+.syntaxhighlighter {
+	font-size: 12px!important;
+}
+
+div.camera_caption_desc {
+	font-size: 12px!important;
+}
+
+
+.well {
+	min-height: 20px;
+	padding: 19px;
+	margin-bottom: 20px;
+	background-color: #f5f5f5;
+	border: 1px solid #e3e3e3;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
+	-webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,0.05);
+	-moz-box-shadow: inset 0 1px 1px rgba(0,0,0,0.05);
+	box-shadow: inset 0 1px 1px rgba(0,0,0,0.05);
+}
+
+
+.dropdown-menu {
+	font-size: 13px !important;
+}
+
+div#bannerSmall {
+	visibility:hidden;
+}
+
+ul.category {
+	list-style-type: none;
+}

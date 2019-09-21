@@ -24,25 +24,27 @@ $layout = $app->input->getCmd('layout', '');
 $task = $app->input->getCmd('task', '');
 $itemid = $app->input->getCmd('Itemid', '');
 $sitename = $app->get('sitename');
+$wa   = $this->getWebAssetManager();
 
 if ($task == "edit" || $layout == "form") {
     $fullWidth = 1;
 } else {
     $fullWidth = 0;
 }
+$wa->enableAsset('template.bootstrap4.' . ($this->direction === 'rtl' ? 'rtl' : 'ltr'));
 
 // Add Stylesheets
 $doc->addStyleSheet($this->baseurl . '/templates/' . $this->template . '/css/bootstrap.min.css');
-$doc->addStyleSheet($this->baseurl . '/templates/' . $this->template . '/css/font-awesome.min.css');
+/*$doc->addStyleSheet($this->baseurl . '/templates/' . $this->template . '/css/font-awesome.min.css');
 $doc->addStyleSheet($this->baseurl . '/templates/' . $this->template . '/css/template.css');
 $doc->addStyleSheet($this->baseurl . '/plugins/editors/jckeditor/typography/typography.css');
 $doc->addStyleSheet($this->baseurl . '/templates/' . $this->template . '/css/templatemod.css');
+*/
 
-// Add scripts
-JHtml::_('jquery.framework');
-$doc->addScript($this->baseurl . '/templates/' . $this->template . '/js/popper.min.js');
-$doc->addScript($this->baseurl . '/templates/' . $this->template . '/js/bootstrap.min.js');
-$doc->addScript($this->baseurl . '/templates/' . $this->template . '/js/template.js');
+
+// $doc->addScript($this->baseurl . '/templates/' . $this->template . '/js/popper.min.js');
+// $doc->addScript($this->baseurl . '/templates/' . $this->template . '/js/bootstrap.min.js');
+// $doc->addScript($this->baseurl . '/templates/' . $this->template . '/js/template.js');
 
 // Adjusting content width
 if ($this->countModules('sidebar-left') && $this->countModules('position-7')) {
@@ -54,7 +56,11 @@ if ($this->countModules('sidebar-left') && $this->countModules('position-7')) {
 } else {
     $span = "col-md-12";
 }
-
+// Logo file or site title param
+if ($this->params->get('logoFile'))
+{
+	$logo = '<img src="' . JUri::root() . $this->params->get('logoFile') . '" alt="' . $sitename . '" />';
+}
 ?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="<?php echo $this->language; ?>" lang="<?php echo $this->language; ?>" dir="<?php echo $this->direction; ?>">
@@ -69,17 +75,17 @@ if ($this->countModules('sidebar-left') && $this->countModules('position-7')) {
         <![endif]-->
     </head>
     <body class="site">
-        <header class="navbar navbar-expand-lg navbar-light bg-faded">
+        <header class="navbar navbar-expand-lg navbar-light bg-faded" style="position:relative;">
             <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <!--<a class="navbar-brand" href="<?php echo JURI::base(); ?>"><?php echo $app->get('sitename'); ?></a>-->
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <jdoc:include type="modules" name="navbar-1" style="none" />
-                <jdoc:include type="modules" name="navbar-2" style="none" />
-            </div>
+            <div class="row" style="position:relative;top:10px;left:10px"> <a class="navbar-brand pull-left" href="<?php echo JURI::base(); ?>"><?php echo $logo; ?></a> </div>
         </header>
-        <div class="body">
+		<div class="navbar navbar-expand-lg navbar-light bg-faded navbar-collapse" id="navbarSupportedContent" style="position:relative">
+			<jdoc:include type="modules" name="navbar-1" style="none" />
+			<jdoc:include type="modules" name="navbar-2" style="none" />
+		</div>
+       <!-- <div class="body">-->
             <div class="content">
                 <!--<div class="jumbotron jumbotron-fluid bg-primary text-white">
                     <div class="container<?php echo ($params->get('fluidContainer') ? '-fluid' : ''); ?>">
@@ -148,7 +154,7 @@ if ($this->countModules('sidebar-left') && $this->countModules('position-7')) {
                         <?php endif; ?>
                     </div>
                 </div>
-            </div>
+            <!--</div>-->
             <footer class="footer" role="contentinfo">
             <div class="container">
             <hr />

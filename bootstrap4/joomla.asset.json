@@ -1,0 +1,39 @@
+{
+  "$schema": "https://developer.joomla.org/schemas/json-schema/web_assets.json",
+  "name": "cassiopeia",
+  "version": "4.0.0",
+  "description": "bootstrap4 is the Joomla 4 site template",
+  "license": "GPL-2.0+",
+  "assets": [
+    {
+      "name": "template.bootstrap4.base",
+      "dependencies": [
+        "core",
+        "jquery-noconflict",
+        "fontawesome-free",
+        "bootstrap.js.bundle"
+      ],
+      "js": [
+        "user.js"
+      ],
+      "css": [
+        "font-awesome.min.css",
+        "template.css",
+        "templatemod.css",
+        "plugins/editors/jckeditor/typography/typography.css"
+      ]
+    },
+    {
+      "name": "template.bootstrap4.ltr",
+      "dependencies": ["template.bootstrap4.base"],
+      "css": [
+      ]
+    },
+    {
+      "name": "template.bootstrap4.rtl",
+      "dependencies": ["template.bootstrap4.base"],
+      "css": [
+      ]
+    }
+  ]
+}
