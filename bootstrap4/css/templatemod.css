@@ -169,7 +169,9 @@ body.site {
 
 .container
 {
-	padding-bottom: 10px !important;	
+	padding-bottom: 10px !important;
+	max-width: 960px !important;
+}
 }
 
 
@@ -260,7 +262,7 @@ table.category th
 .row {
 	margin-left: 0px;	
 }
-.leading-0,.column-1, .column-2,.item-page, .cat-children, .weblink-category, .comment-box
+.leading-0,.leading-1,.leading-2,.column-1, .column-2,.item-page, .cat-children, .weblink-category, .comment-box
 {
 	border:solid 1px #ddd;
 	-moz-border-radius: 10px;
@@ -304,9 +306,9 @@ label
 
 
 .tip-wrap {
-    color: #0044CC;
+	color: #0044CC;
 	background-color: #DDDDDD;
-    text-align: center;
+	text-align: center;
 }
 /*#css3treeview*/
 #xmap ul,
@@ -319,8 +321,9 @@ label
 #xmap a
 {
 	background: transparent url(http://images.jltryoen.fr/world_link.png) center left no-repeat;
-    padding-left: 20px;
+	padding-left: 20px;
 	background-size:16px;
+	display: inline-block;
 }	
 
 
@@ -411,9 +414,9 @@ label
 		width:96% !important;
 		max-width:96% !important;
 		margin-left: 2px !important;
-        margin-right: 2px !important;
+		margin-right: 2px !important;
 		margin-top: 0px !important;
-        margin-bottom: 0px !important;
+		margin-bottom: 0px !important;
 		padding-left: 2px !important;
 		padding-right: 2px !important;
 	}
@@ -561,30 +564,30 @@ label
 
 
  .readmore-link,a.readmore-link {
-    background-image:  url("http://images.jltryoen.fr/LOGO-Cercle-Fleche2.png")!important;
-    background-repeat: no-repeat;
+	background-image:  url("http://images.jltryoen.fr/LOGO-Cercle-Fleche2.png")!important;
+	background-repeat: no-repeat;
 	padding-bottom: 20px !important;
-    padding-left: 50px !important;
-    padding-right: 8px !important;
-    padding-top: 12px !important;
+	padding-left: 50px !important;
+	padding-right: 8px !important;
+	padding-top: 12px !important;
 	margin-bottom : 20px !important;
 }
 
 .comments-link,a.comments-link  {
-    background-image: url("http://images.jltryoen.fr/comment.png") !important;
+	background-image: url("http://images.jltryoen.fr/comment.png") !important;
 	background-position: 0px, 0px!important;
-    background-repeat: no-repeat;
-    padding: 30px 2px 20px 50px !important;
+	background-repeat: no-repeat;
+	padding: 30px 2px 20px 50px !important;
 	display:block;
 }
 
 .suite-link, a.suite-link {
-    background-image: url("http://images.jltryoen.fr/LOGO-Cercle-Fleche2.png") !important;
-    background-position: 0 center, 0 center !important;
-    background-repeat: no-repeat;
-    display: block;
-    margin-bottom: 2px !important;
-    padding: 10px 0 10px 50px !important;
+	background-image: url("http://images.jltryoen.fr/LOGO-Cercle-Fleche2.png") !important;
+	background-position: 0 center, 0 center !important;
+	background-repeat: no-repeat;
+	display: block;
+	margin-bottom: 2px !important;
+	padding: 10px 0 10px 50px !important;
 }
 
 
@@ -593,38 +596,38 @@ label
 .web-jck {
 	background-image: url("http://images.jltryoen.fr/web-icon.png") !important;
 	background-position: left center !important;
-    background-repeat: no-repeat !important;
-    border-bottom-color: #C8C8C8;
-    border-bottom-style: dotted;
-    border-bottom-width: 1px;
-    border-top-color: #C8C8C8;
-    border-top-style: dotted;
-    border-top-width: 1px;
-    display: block;
-    font-size: 14px;
-    margin-bottom: 10px !important;
-    margin-left: 0 !important;
-    margin-right: 0 !important;
-    margin-top: 10px !important;
-    padding-bottom: 7px !important;
-    padding-left: 35px !important;
-    padding-right: 10px !important;
-    padding-top: 7px !important;
-    text-shadow: 1px 1px 1px #FFFFFF;
-    transition-delay: 0s;
-    transition-duration: 800ms;
-    transition-property: background-color;
-    transition-timing-function: ease-in-out;
-    color: #444444 !important;
+	background-repeat: no-repeat !important;
+	border-bottom-color: #C8C8C8;
+	border-bottom-style: dotted;
+	border-bottom-width: 1px;
+	border-top-color: #C8C8C8;
+	border-top-style: dotted;
+	border-top-width: 1px;
+	display: block;
+	font-size: 14px;
+	margin-bottom: 10px !important;
+	margin-left: 0 !important;
+	margin-right: 0 !important;
+	margin-top: 10px !important;
+	padding-bottom: 7px !important;
+	padding-left: 35px !important;
+	padding-right: 10px !important;
+	padding-top: 7px !important;
+	text-shadow: 1px 1px 1px #FFFFFF;
+	transition-delay: 0s;
+	transition-duration: 800ms;
+	transition-property: background-color;
+	transition-timing-function: ease-in-out;
+	color: #444444 !important;
 }
 
 [class*="-jck"]:hover, a.[class*="-jck"]:hover  {
-    background-color: #F2F2F2 !important;
-    background-repeat: no-repeat !important;
-    transition-delay: 0s;
-    transition-duration: 400ms;
-    transition-property: background-color;
-    transition-timing-function: ease-in-out;
+	background-color: #F2F2F2 !important;
+	background-repeat: no-repeat !important;
+	transition-delay: 0s;
+	transition-duration: 400ms;
+	transition-property: background-color;
+	transition-timing-function: ease-in-out;
 }
 
 [class*="-jck"]
@@ -636,19 +639,19 @@ label
 .mostread a
 {
 	background: transparent url(http://www.jltryoen.fr/joomla_3.0/templates/protostar/favicon.ico) center left no-repeat;
-    padding-left: 18px;
+	padding-left: 18px;
 	background-size:16px;
 }
 
 .mostread li
 {
-    list-style-type: none;
-    margin-left: -25px;
+	list-style-type: none;
+	margin-left: -25px;
 }
 
 
 ul.mostread {
-    margin: 0 0 4px 2px;
+	margin: 0 0 4px 2px;
 }
 
 
@@ -669,32 +672,32 @@ ul.mostread {
 
 
 .container {
-    max-width: 960px;
+	max-width: 960px;
 }
 
 
 body .container {
-    background-color: #fff;
-    -moz-border-radius: 4px;
-    -webkit-border-radius: 4px;
-    border-radius: 4px;
-    padding: 20px;
-        padding-bottom: 20px;
-    border: 1px solid rgba(0,0,0,0.15);
-    -moz-box-shadow: 0px 0px 6px rgba(0,0,0,0.05);
-    -webkit-box-shadow: 0px 0px 6px rgba(0,0,0,0.05);
-    box-shadow: 0px 0px 6px rgba(0,0,0,0.05);
+	background-color: #fff;
+	-moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
+	border-radius: 4px;
+	padding: 20px;
+		padding-bottom: 20px;
+	border: 1px solid rgba(0,0,0,0.15);
+	-moz-box-shadow: 0px 0px 6px rgba(0,0,0,0.05);
+	-webkit-box-shadow: 0px 0px 6px rgba(0,0,0,0.05);
+	box-shadow: 0px 0px 6px rgba(0,0,0,0.05);
 }
 
 
 
 .readmore-link,a.readmore-link {
-    background-image:  url("http://images.jltryoen.fr/LOGO-Cercle-Fleche2.png")!important;
-    background-repeat: no-repeat;
+	background-image:  url("http://images.jltryoen.fr/LOGO-Cercle-Fleche2.png")!important;
+	background-repeat: no-repeat;
 	padding-bottom: 20px !important;
-    padding-left: 50px !important;
-    padding-right: 8px !important;
-    padding-top: 12px !important;
+	padding-left: 50px !important;
+	padding-right: 8px !important;
+	padding-top: 12px !important;
 	margin-bottom : 20px !important;
 }
 
