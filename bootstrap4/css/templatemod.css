@@ -288,7 +288,10 @@ select {
 	height: 24px;
 	line-height : 24px;
 }
-
+select[multiple], select[size] {
+    height: unset !important;
+	max-height : 18px;
+}
 
 div.mw-geshi {
     border: 1px dashed #2F6FAB;
