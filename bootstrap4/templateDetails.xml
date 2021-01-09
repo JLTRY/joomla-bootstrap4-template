@@ -24,6 +24,7 @@
         <folder>language</folder>
     </files>
     <positions>
+	    <position>head</position>
         <position>banner</position>
         <position>debug</position>
         <position>breadcrumbs</position>

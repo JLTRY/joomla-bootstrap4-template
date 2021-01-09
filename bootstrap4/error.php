@@ -32,7 +32,10 @@ JHtml::_('jquery.framework');
 if ($this->params->get('logoFile'))
 {
 	$logo = '<img src="' . JUri::root() . $this->params->get('logoFile') . '" alt="' . $sitename . '" />';
+} else {
+	$logo = "";
 }
+
 ?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="<?php echo $this->language; ?>" lang="<?php echo $this->language; ?>" dir="<?php echo $this->direction; ?>">
@@ -53,12 +56,12 @@ if ($this->params->get('logoFile'))
     </head>
 
     <body class="site <?php
-    echo $option
-    . ' view-' . $view
-    . ($layout ? ' layout-' . $layout : ' no-layout')
-    . ($task ? ' task-' . $task : ' no-task')
-    . ($itemid ? ' itemid-' . $itemid : '')
-    . ($params->get('fluidContainer') ? ' fluid' : '');
+		echo $option
+		. ' view-' . $view
+		. ($layout ? ' layout-' . $layout : ' no-layout')
+		. ($task ? ' task-' . $task : ' no-task')
+		. ($itemid ? ' itemid-' . $itemid : '')
+		. ($params->get('fluidContainer') ? ' fluid' : '');
     ?>">
 
         <header class="navbar navbar-static-top navbar-light bg-faded" role="banner">

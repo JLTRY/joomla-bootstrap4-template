@@ -62,13 +62,23 @@ if ($this->params->get('logoFile'))
         <!--[if lt IE 9]>
                 <script src="<?php echo JUri::root(true); ?>/media/jui/js/html5.js"></script>
         <![endif]-->
+
     </head>
 	<body class="site">
-		<header class="navbar navbar-expand-lg navbar-light bg-faded" style="position:relative;">
+		<header class="row navbar navbar-expand-lg navbar-light bg-faded" style="position:relative;">
 			<button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 				<span class="navbar-toggler-icon"></span>
 			</button>
-			<div class="row" style="position:relative;top:10px;left:10px"> <a class="navbar-brand pull-left" href="<?php echo JURI::base(); ?>"><?php echo $logo; ?></a> </div>
+			<div class="col-md-9">
+				<a class="navbar-brand pull-left" href="<?php echo JURI::base(); ?>"><?php echo $logo; ?></a>
+			</div>
+			<div class="col-md-1">
+				<jdoc:include type="modules" name="head" style="none" />
+			</div>			
+			<div class="col-md-2">
+				
+			</div>
+		</div>
 		</header>
 		<div class="navbar navbar-expand-lg navbar-light bg-faded navbar-collapse" id="navbarSupportedContent" style="position:relative">
 			<jdoc:include type="modules" name="navbar-1" style="none" />

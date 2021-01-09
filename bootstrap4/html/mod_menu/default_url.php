@@ -26,6 +26,11 @@ if ($item->anchor_rel)
 	$attributes['rel'] = $item->anchor_rel;
 }
 
+if ($item->data_toggle)
+{
+	$attributes['data-bs-toggle'] = $item->data_toggle;
+}
+
 $linktype = $item->title;
 
 if ($item->menu_image)

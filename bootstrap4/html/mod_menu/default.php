@@ -80,7 +80,7 @@ foreach ($list as $i => &$item)
 	 {
 		$item->anchor_css .= ' dropdown-toggle';
 		$item->data_toggle = 'dropdown';
-		$item->data = 'data-toggle="dropdown"';
+		//$item->data = 'data-bs-toggle="dropdown"';
 	 }
 
 	// Render the menu item.

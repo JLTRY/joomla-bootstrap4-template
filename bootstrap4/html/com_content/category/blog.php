@@ -95,7 +95,7 @@ $afterDisplayContent = trim(implode("\n", $results));
 	$introcount = count($this->intro_items);
 	$counter = 0;
 	?>
-
+	
 	 <?php if (!empty($this->intro_items)&& property_exists($this, "columns")) : ?>
 		<?php foreach ($this->intro_items as $key => &$item) : ?>
 			<?php $rowcount = ((int) $key % (int) $this->columns) + 1; ?>

@@ -10,8 +10,7 @@
       "type": "script",
       "dependencies": [
         "core",
-        "jquery-noconflict",
-        "bootstrap.js.bundle"
+        "bootstrap.dropdown"
       ],
       "uri": "user.js"
     },
@@ -50,15 +49,20 @@
       "type": "style",
       "uri": "templatemod.css"
     },
+	{
+      "name": "template.bootstrap4.user",
+      "type": "style",
+      "uri": "user.css"
+    },
     {
       "name": "template.bootstrap4.ltr",
       "type": "style",
-      "dependencies": [ "template.bootstrap4.fontawesome", "template.bootstrap4.fontawesome.solid", "template.bootstrap4.typography", "template.bootstrap4.templatemod", "template.bootstrap4.bootstrap", "template.bootstrap4.template"]
+      "dependencies": [ "template.bootstrap4.fontawesome", "template.bootstrap4.fontawesome.solid", "template.bootstrap4.typography", "template.bootstrap4.templatemod", "template.bootstrap4.user", "template.bootstrap4.bootstrap", "template.bootstrap4.template"]
     },
     {
       "name": "template.bootstrap4.rtl",
       "type": "style",
-      "dependencies": [ "template.bootstrap4.fontawesome", "template.bootstrap4.fontawesome.solid", "template.bootstrap4.typography", "template.bootstrap4.templatemod", "template.bootstrap4.bootstrap", "template.bootstrap4.template"]
+      "dependencies": [ "template.bootstrap4.fontawesome", "template.bootstrap4.fontawesome.solid", "template.bootstrap4.typography", "template.bootstrap4.templatemod", "template.bootstrap4.user", "template.bootstrap4.bootstrap", "template.bootstrap4.template"]
     },
     {
       "name": "template.bootstrap4.ltr",
