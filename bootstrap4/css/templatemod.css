@@ -272,8 +272,8 @@ table.category th
 	border-bottom-style:solid;
 	border-left-style:solid;
 	margin-bottom: 10px;
-	padding-left: 10px;
-	padding-bottom: 10px;
+	padding-left: 15px;
+	padding-bottom: 15px;
 }
 
 
@@ -290,7 +290,8 @@ select {
 }
 select[multiple], select[size] {
     height: unset !important;
-	max-height : 18px;
+	//max-height : 18px;
+	font-size: inherit !important;
 }
 
 div.mw-geshi {

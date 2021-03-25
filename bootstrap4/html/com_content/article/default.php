@@ -45,7 +45,7 @@ $info    = $params->get('info_block_position', 0);
 	<?php endif; ?>
 	<?php if ($params->get('show_title') || $params->get('show_author')) : ?>
 	<div class="page-header">
-		<?php if ($params->get('show_title') && false) : ?>
+		<?php if ($params->get('show_title')) : ?>
 			<h2 itemprop="name">
 				<?php echo $this->escape($this->item->title); ?>
 			</h2>

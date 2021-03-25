@@ -5,12 +5,23 @@
   "description": "bootstrap4 is the Joomla 4 site template",
   "license": "GPL-2.0+",
   "assets": [
+   {
+      "name": "bootstrap.bundle",
+      "type": "script",
+      "uri": "media/vendor/bootstrap/js/bootstrap.bundle.js",
+	  "dependencies": [
+        "core",
+		"jquery"
+	  ]
+    },
     {
       "name": "template.bootstrap4",
       "type": "script",
       "dependencies": [
         "core",
-        "bootstrap.dropdown"
+		"bootstrap.bundle",
+		"bootstrap.dropdown",
+		"awesomplete"
       ],
       "uri": "user.js"
     },
@@ -57,12 +68,12 @@
     {
       "name": "template.bootstrap4.ltr",
       "type": "style",
-      "dependencies": [ "template.bootstrap4.fontawesome", "template.bootstrap4.fontawesome.solid", "template.bootstrap4.typography", "template.bootstrap4.templatemod", "template.bootstrap4.user", "template.bootstrap4.bootstrap", "template.bootstrap4.template"]
+      "dependencies": [ "awesomplete" , "template.bootstrap4.fontawesome", "template.bootstrap4.fontawesome.solid", "template.bootstrap4.typography", "template.bootstrap4.templatemod", "template.bootstrap4.user", "template.bootstrap4.bootstrap", "template.bootstrap4.template"]
     },
     {
       "name": "template.bootstrap4.rtl",
       "type": "style",
-      "dependencies": [ "template.bootstrap4.fontawesome", "template.bootstrap4.fontawesome.solid", "template.bootstrap4.typography", "template.bootstrap4.templatemod", "template.bootstrap4.user", "template.bootstrap4.bootstrap", "template.bootstrap4.template"]
+      "dependencies": [ "awesomplete", "template.bootstrap4.fontawesome", "template.bootstrap4.fontawesome.solid", "template.bootstrap4.typography", "template.bootstrap4.templatemod", "template.bootstrap4.user", "template.bootstrap4.bootstrap", "template.bootstrap4.template"]
     },
     {
       "name": "template.bootstrap4.ltr",

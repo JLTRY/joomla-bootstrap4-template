@@ -7,7 +7,7 @@
  * @license     GNU General Public License version 2 or later; see LICENSE.txt
  */
 defined('_JEXEC') or die;
-
+use Joomla\CMS\HTML\HTMLHelper;
 $app = JFactory::getApplication();
 $doc = JFactory::getDocument();
 $user = JFactory::getUser();
@@ -33,7 +33,7 @@ if ($task == "edit" || $layout == "form") {
 }
 //$wa->enableAsset('template.bootstrap4.' . ($this->direction === 'rtl' ? 'rtl' : 'ltr'));
 $wa->usePreset('template.bootstrap4.' . ($this->direction === 'rtl' ? 'rtl' : 'ltr'));
-
+HTMLHelper::_('bootstrap.framework', true);
 
 // Adjusting content width
 if ($this->countModules('sidebar-left') && $this->countModules('position-7')) {
