@@ -22,6 +22,9 @@ $wa   = $this->getWebAssetManager();
 $ws = $doc->getWebAssetManager()->getRegistry();
 $ws->addTemplateRegistryFile("bootstrap4", 0);
 $wa->usePreset('template.bootstrap4.' . ($this->direction === 'rtl' ? 'rtl' : 'ltr'));
+if (!isset($sitename)) {
+	$sitename = "";
+}
 // Logo file or site title param
 if ($this->params->get('logoFile'))
 {
@@ -38,6 +41,8 @@ if ($this->params->get('logoFile'))
 <![endif]-->
 </head>
 <body class="site">
+		<div class="container">
+
 	<?php if ($header) : ?>
 	<header class="row navbar navbar-expand-lg navbar-light bg-faded" style="position:relative;">
 		<button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -55,11 +60,9 @@ if ($this->params->get('logoFile'))
 		</div>
 	</header>
 	<?php endif ?>
-	<div class="content">
 		<div class="container<?php echo ($params->get('fluidContainer') ? '-fluid' : ''); ?>">
 			<jdoc:include type="message" />
 			<jdoc:include type="component" />
 		</div>
-	</div>
 </body>
 </html>

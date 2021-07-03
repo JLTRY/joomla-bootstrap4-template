@@ -48,7 +48,7 @@
     {
       "name": "template.bootstrap4.bootstrap",
       "type": "style",
-      "uri": "bootstrap.min.css"
+      "uri": "media/vendor/bootstrap/css/bootstrap.min.css"
     },
     {
       "name": "template.bootstrap4.template",

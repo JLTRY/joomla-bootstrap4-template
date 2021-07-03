@@ -45,6 +45,25 @@ if ($this->countModules('sidebar-left') && $this->countModules('position-7')) {
 } else {
     $span = "col-md-12";
 }
+
+$nbspan2 = 0;
+// Adjusting content width
+if ($this->countModules('position-4'))
+{
+	$nbspan2 = 1;	
+}
+if ($this->countModules('position-5'))
+{
+	$nbspan2 = $nbspan2 + 1;
+}
+if ($this->countModules('position-6'))
+{
+	$nbspan2 = $nbspan2 + 1;
+}
+if ($nbspan2 == 0)
+	$nbspan2 = 1;
+$span2 = "col-lg-" . (12 / $nbspan2);
+
 // Logo file or site title param
 if ($this->params->get('logoFile'))
 {
@@ -65,26 +84,26 @@ if ($this->params->get('logoFile'))
 
     </head>
 	<body class="site">
-		<header class="row navbar navbar-expand-lg navbar-light bg-faded" style="position:relative;">
-			<button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-				<span class="navbar-toggler-icon"></span>
-			</button>
-			<div class="col-md-9">
-				<a class="navbar-brand pull-left" href="<?php echo JURI::base(); ?>"><?php echo $logo; ?></a>
+		<div class="container">
+			<div class="row navbar navbar-expand-lg navbar-light bg-faded">
+				<button class="navbar-toggler ml-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				</button>
 			</div>
-			<div class="col-md-1">
-				<jdoc:include type="modules" name="head" style="none" />
-			</div>			
-			<div class="col-md-2">
-				
+			<div class="header row">
+				<div class="col-md-10">
+					<a class="navbar-brand pull-left" href="<?php echo JURI::base(); ?>"><?php echo $logo; ?></a>
+				</div>
+				<div class="col-md-1">
+					<jdoc:include type="modules" name="head" style="none" />
+				</div>			
+				<div class="col-md-1">			
+				</div>
 			</div>
-		</div>
-		</header>
-		<div class="navbar navbar-expand-lg navbar-light bg-faded navbar-collapse" id="navbarSupportedContent" style="position:relative">
-			<jdoc:include type="modules" name="navbar-1" style="none" />
-			<jdoc:include type="modules" name="navbar-2" style="none" />
-		</div>
-		<div class="content">
+		<div class="navbar navbar-expand-lg navbar-light bg-faded navbar-collapse collapse" id="navbarSupportedContent" style="position:relative">
+				<jdoc:include type="modules" name="navbar-1" style="none" />
+				<jdoc:include type="modules" name="navbar-2" style="none" />
+			</div>
 			<!--<div class="jumbotron jumbotron-fluid bg-primary text-white">
 				<div class="container<?php echo ($params->get('fluidContainer') ? '-fluid' : ''); ?>">
 					<?php if(JURI::base() == JURI::current()) { ?>
@@ -116,12 +135,12 @@ if ($this->params->get('logoFile'))
 							</div>
 						</div>
 					<?php endif; ?>
-					<main id="content" role="main" class="<?php echo $span; ?>">
+					<div id="content" role="main" class="<?php echo $span; ?>">
 						<jdoc:include type="modules" name="position-3" style="xhtml" />
 						<jdoc:include type="message" />
 						<jdoc:include type="component" />
 						<jdoc:include type="modules" name="position-2" style="none" />
-					</main>
+					</div>
 					<?php if ($this->countModules('position-7')) : ?>
 						<div id="aside" class="col-md-3">
 							<jdoc:include type="modules" name="position-7" style="xhtml" />
@@ -137,7 +156,7 @@ if ($this->params->get('logoFile'))
 						</div>
 					<?php endif; ?>
 					<?php if ($this->countModules('position-5')) : ?>
-						<div id="sidebar" class="col-md-4">
+						<div id="sidebar" class="<?php echo $span2; ?>">
 							<div class="sidebar-nav">
 								<jdoc:include type="modules" name="position-5" style="xhtml" />
 							</div>

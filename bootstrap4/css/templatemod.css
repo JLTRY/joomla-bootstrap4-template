@@ -146,7 +146,15 @@ a
 	background-color: #FFFFFF;
 }
 
+.navbar-toggler {
+	max-width: 100px;
+	top: -40px;
+	position: relative;
+}
 
+.container img {
+	max-width : 95%;
+}
 body.site {
     border-top-width: 0 !important;
 	background: #fafafa url('http://images.jltryoen.fr/headbg.jpg') top left no-repeat fixed !important;
@@ -170,7 +178,7 @@ body.site {
 .container
 {
 	padding-bottom: 10px !important;
-	max-width: 960px !important;
+	max-width: 1024px !important;
 }
 }
 
@@ -217,6 +225,20 @@ h4 {
 	font-size :14px! important;
 }
 
+h5 {
+	font-size :12px! important;
+}
+
+h3 {
+    font-size: 18px !important;
+    line-height: 20px;
+}
+
+p {
+    margin-top: 0;
+    margin-bottom: 1px;
+    word-wrap: break-word;
+}
 
 .printfooter
 {
@@ -439,7 +461,7 @@ label
 
 }
 
-@media (min-width: 768px) and (max-width: 769px){
+@media (min-width: 592px) and (max-width: 768px){
 	.header {
 		margin-bottom: 0px;
 		left:10px;
@@ -450,13 +472,31 @@ label
 		top: 0;
 		left: 0;
 	}
-}
-
-@media (min-width: 768px)
-	.nav-pills > li  {
-		display: inline-block;
+	.navbar-collapse
+	{
+		padding: 0px 0;	
+		max-width: 180px;
+		position : relative;
+		left: 20px;
+		top: 20px;	
+		border-top: none;
+		border-bottom: none;
+		border:solid 1px #ddd;
+		-moz-border-radius: 10px;
+		border-radius: 10px;
+		border-top-style:solid;
+		border-right-style:solid;
+		border-bottom-style:solid;
+		border-left-style:solid;
+		position : relative;
+		top : -18px;
+		margin-top: 0px;
+		padding-left: 0px;
+		padding-bottom: 0px;		
 	}
 }
+
+
 
 @media (min-width: 768px) and (max-width: 979px) {
 	.header {
@@ -498,8 +538,16 @@ label
 		position: absolute;
 		float: none;
 		top: 0;
-		left: 110px;
+		left: 10px!important;
 	}
+
+	.nav-pills > li  {
+		display: inline-block;
+	}
+	.navbar-collapse {
+		display: block !important;
+	}
+
 	.offset1_2,.offset1-2 {
 		margin-left: 50px !important;
 	}
@@ -687,7 +735,6 @@ body .container {
 	border-radius: 4px;
 	padding: 20px;
 		padding-bottom: 20px;
-	border: 1px solid rgba(0,0,0,0.15);
 	-moz-box-shadow: 0px 0px 6px rgba(0,0,0,0.05);
 	-webkit-box-shadow: 0px 0px 6px rgba(0,0,0,0.05);
 	box-shadow: 0px 0px 6px rgba(0,0,0,0.05);
