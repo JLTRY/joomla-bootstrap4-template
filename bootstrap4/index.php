@@ -14,6 +14,7 @@ $user = JFactory::getUser();
 $this->language = $doc->language;
 $this->direction = $doc->direction;
 
+
 // Getting params from template
 $params = $app->getTemplate(true)->params;
 
@@ -31,8 +32,7 @@ if ($task == "edit" || $layout == "form") {
 } else {
     $fullWidth = 0;
 }
-//$wa->enableAsset('template.bootstrap4.' . ($this->direction === 'rtl' ? 'rtl' : 'ltr'));
-$wa->usePreset('template.bootstrap4.' . ($this->direction === 'rtl' ? 'rtl' : 'ltr'));
+$wa->usePreset('template.bootstrap5.' . ($this->direction === 'rtl' ? 'rtl' : 'ltr'));
 HTMLHelper::_('bootstrap.framework', true);
 
 // Adjusting content width

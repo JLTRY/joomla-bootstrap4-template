@@ -2,7 +2,7 @@
   "$schema": "https://developer.joomla.org/schemas/json-schema/web_assets.json",
   "name": "cassiopeia",
   "version": "4.0.0",
-  "description": "bootstrap4 is the Joomla 4 site template",
+  "description": "bootstrap5 is the Joomla 4 site template",
   "license": "GPL-2.0+",
   "assets": [
    {
@@ -15,7 +15,7 @@
 	  ]
     },
     {
-      "name": "template.bootstrap4",
+      "name": "template.bootstrap5",
       "type": "script",
       "dependencies": [
         "core",
@@ -26,69 +26,64 @@
       "uri": "user.js"
     },
     {
-      "name": "template.bootstrap4.fontawesome",
+      "name": "template.bootstrap5.fontawesome",
       "type": "style",
-      "uri": "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/fontawesome.min.css"
-    },
-   {
-      "name": "template.bootstrap4.fontawesome.solid",
-      "type": "style",
-      "uri": "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/solid.css"
+      "uri": "system/joomla-fontawesome.min.css"
     },
     {
-      "name": "template.bootstrap4.googlefont",
+      "name": "template.bootstrap5.googlefont",
       "type": "style",
       "uri": "https://fonts.googleapis.com/css?family=Fira+Sans:400"
     },
     {
-      "name": "template.bootstrap4.typography",
+      "name": "template.bootstrap5.typography",
       "type": "style",
       "uri": "plugins/editors/jckeditor/typography/typography.css"
     },
     {
-      "name": "template.bootstrap4.bootstrap",
+      "name": "template.bootstrap5.bootstrap",
       "type": "style",
       "uri": "media/vendor/bootstrap/css/bootstrap.min.css"
     },
     {
-      "name": "template.bootstrap4.template",
+      "name": "template.bootstrap5.template",
       "type": "style",
       "uri": "template.css"
     },
     {
-      "name": "template.bootstrap4.templatemod",
+      "name": "template.bootstrap5.templatemod",
       "type": "style",
       "uri": "templatemod.css"
     },
 	{
-      "name": "template.bootstrap4.user",
+      "name": "template.bootstrap5.user",
       "type": "style",
       "uri": "user.css"
     },
     {
-      "name": "template.bootstrap4.ltr",
+      "name": "template.bootstrap5.ltr",
       "type": "style",
-      "dependencies": [ "awesomplete" , "template.bootstrap4.fontawesome", "template.bootstrap4.fontawesome.solid", "template.bootstrap4.typography", "template.bootstrap4.templatemod", "template.bootstrap4.user", "template.bootstrap4.bootstrap", "template.bootstrap4.template"]
+      "dependencies": [ "template.bootstrap5.typography", "template.bootstrap5.fontawesome", "template.bootstrap5.templatemod", "template.bootstrap5.user", "template.bootstrap5.bootstrap", "template.bootstrap5.template"]
     },
     {
-      "name": "template.bootstrap4.rtl",
+      "name": "template.bootstrap5.rtl",
       "type": "style",
-      "dependencies": [ "awesomplete", "template.bootstrap4.fontawesome", "template.bootstrap4.fontawesome.solid", "template.bootstrap4.typography", "template.bootstrap4.templatemod", "template.bootstrap4.user", "template.bootstrap4.bootstrap", "template.bootstrap4.template"]
+      "dependencies": [ "template.bootstrap5.typography", "template.bootstrap5.fontawesome", "template.bootstrap5.templatemod", "template.bootstrap5.user", "template.bootstrap5.bootstrap", "template.bootstrap5.template"]
     },
     {
-      "name": "template.bootstrap4.ltr",
+      "name": "template.bootstrap5.ltr",
       "type": "preset",
       "dependencies": [
-        "template.bootstrap4.ltr#style",
-        "template.bootstrap4#script"
+        "template.bootstrap5.ltr#style",
+        "template.bootstrap5#script"
       ]
     },
     {
-      "name": "template.bootstrap4.rtl",
+      "name": "template.bootstrap5.rtl",
       "type": "preset",
       "dependencies": [
-        "template.bootstrap4.rtl#style",
-        "template.bootstrap4#script"
+        "template.bootstrap5.rtl#style",
+        "template.bootstrap5#script"
       ]
     }
   ]

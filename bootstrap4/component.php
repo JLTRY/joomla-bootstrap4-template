@@ -20,8 +20,8 @@ $header = JFactory::getApplication()->input->getInt('header', 0);
 
 $wa   = $this->getWebAssetManager();
 $ws = $doc->getWebAssetManager()->getRegistry();
-$ws->addTemplateRegistryFile("bootstrap4", 0);
-$wa->usePreset('template.bootstrap4.' . ($this->direction === 'rtl' ? 'rtl' : 'ltr'));
+$ws->addTemplateRegistryFile("bootstrap5", 0);
+$wa->usePreset('template.bootstrap5.' . ($this->direction === 'rtl' ? 'rtl' : 'ltr'));
 if (!isset($sitename)) {
 	$sitename = "";
 }
