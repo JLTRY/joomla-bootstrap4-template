@@ -148,12 +148,13 @@ a
 
 .navbar-toggler {
 	max-width: 100px;
-	top: -40px;
+	top: -20px;
 	position: relative;
 }
 
 .container img {
-	max-width : 95%;
+	max-width : 95%;		
+	margin-left: -4px;
 }
 body.site {
     border-top-width: 0 !important;
@@ -207,6 +208,19 @@ h2 {
 	font-size: 18px!important;
 	line-height: 34px!important;
 }
+h4 {
+	font-size :14px! important;
+}
+
+h5 {
+	font-size :12px! important;
+}
+
+h3 {
+    font-size: 18px !important;
+    line-height: 20px;
+}
+
 /* JLT*/
 .body .footer .container
 {
@@ -225,18 +239,7 @@ h4, h5, h6 {
 }
 
 
-h4 {
-	font-size :14px! important;
-}
 
-h5 {
-	font-size :12px! important;
-}
-
-h3 {
-    font-size: 18px !important;
-    line-height: 20px;
-}
 
 p {
     margin-top: 0;
@@ -300,6 +303,7 @@ table.category th
 	margin-bottom: 10px;
 	padding-left: 15px;
 	padding-bottom: 15px;
+	padding-top: 10px;
 }
 
 
@@ -538,11 +542,20 @@ label
 		margin-bottom: 0px;
 		left:100px!important;
 	}
+	.row {
+		--bs-gutter-x: 0.5rem!important;
+	}
+	.fa-user {
+		padding: .375rem .2rem;
+	}
 	.navbar {
 		position: absolute;
 		float: none;
 		top: 0;
-		left: 10px!important;
+		left: 10px !important;
+		margin-right: 10px;
+		margin-left: -10px;
+		padding-left: 10px;
 	}
 
 	.nav-pills > li  {

@@ -100,7 +100,7 @@ if ($this->params->get('logoFile'))
 				<div class="col-md-1">			
 				</div>
 			</div>
-		<div class="navbar navbar-expand-lg navbar-light bg-faded navbar-collapse collapse" id="navbarSupportedContent" style="position:relative">
+		<div class="navbar navbar-expand-lg navbar-light bg-light navbar-collapse collapse" id="navbarSupportedContent" style="position:relative">
 				<jdoc:include type="modules" name="navbar-1" style="none" />
 				<jdoc:include type="modules" name="navbar-2" style="none" />
 			</div>
